@@ -5,13 +5,12 @@ import { NavBar, Alert } from "./components";
 import { Provider } from "react-redux";
 import store from "./store";
 
-
 function App() {
   return (
     <Provider store={store}>
       <Router>
-        <NavBar/>
-        <div className="container pt-4">
+        <NavBar />
+        <div className="container pt-4" >
           <Alert />
           <Switch>
             <Route path="/" exact component={Home} />

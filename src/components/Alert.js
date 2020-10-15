@@ -7,11 +7,10 @@ const Alert = ({ text, alertHide, visible }) => {
     return null;
   }
   return (
-    <div
-      className='alert alert-success alert-dismissible'
-      role="alert"
-    >
-      <strong>Заметка: </strong> {text}
+    <div className="alert alert-success alert-dismissible " role="alert">
+      <div className="text__overflow">
+        <strong>Заметка: </strong> {text}
+      </div>
       <button
         onClick={() => alertHide()}
         type="button"
@@ -19,9 +18,9 @@ const Alert = ({ text, alertHide, visible }) => {
         data-dismiss="alert"
         aria-label="Close"
       >
-        <span aria-hidden="true">
+        <p aria-hidden="true">
           &times;
-        </span>
+        </p>
       </button>
     </div>
   );

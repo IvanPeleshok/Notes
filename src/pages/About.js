@@ -2,10 +2,10 @@ import React from "react";
 
 export const About = () => {
   return (
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-4">Иван Пелешок</h1>
-        <p class="lead">
+    <div className="jumbotron">
+      <div className="container">
+        <h1 className="display-4">Иван Пелешок</h1>
+        <p className="lead">
           Разработка приложения с deploy 
         </p>
       </div>

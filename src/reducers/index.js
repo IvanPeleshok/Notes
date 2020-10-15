@@ -2,11 +2,12 @@ const initialState = {
   alertText: "",
   text: "",
   visible: false,
-  loading: false,
+  loading: true,
   notes: [],
 };
 
 const reducer = (state = initialState, action) => {
+  console.log(state);
   switch (action.type) {
     case "ALERT_RECORD":
       return {
@@ -44,13 +45,20 @@ const reducer = (state = initialState, action) => {
     case "DELETE_NOTE":
       return {
         ...state,
-        nodes: state.notes.filter((item) => {
+        nodes: state.notes.filter(item => {
           if (item.id !== action.payload) {
             return item;
+          } else {
+            return null;
           }
         }),
         loading: true,
       };
+    case "HOME_DEFOCUSED":
+      return {
+        ...state,
+        loading: false,
+      }
     default:
       return state;
   }

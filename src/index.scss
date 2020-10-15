@@ -13,3 +13,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.text__overflow{
+  overflow-x: auto;
+}
+
+.header__item{
+  color: white;
+  transition: 0.5s all;
+}
+
+.header__item:hover{
+   opacity: 0.8;
+   font-size: 1.2rem;
+}

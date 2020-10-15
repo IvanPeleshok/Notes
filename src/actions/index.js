@@ -32,7 +32,7 @@ const postNote = (text) => async (dispatch) => {
     title: text,
     date: new Date().toString(),
   };
-  const res = await axios.post(`${url}/notes.json`, data);
+  await axios.post(`${url}/notes.json`, data);
 
   dispatch({
     type: "POST_NOTE",
@@ -42,7 +42,7 @@ const postNote = (text) => async (dispatch) => {
 
 const getNote = () => async (dispatch) => {
   const res = await axios.get(`${url}/notes.json`);
-  if (!res.data) {
+  if (res.data == null) {
     dispatch({
       type: "GET_NOTE",
       payload: [],
@@ -67,6 +67,8 @@ const deleteNotes = (id) => async (dispatch) => {
   });
 };
 
+const homeDefocused = () => ({type: "HOME_DEFOCUSED"});
+
 export {
   alertRecord,
   alertShow,
@@ -75,4 +77,5 @@ export {
   postNote,
   getNote,
   deleteNotes,
+  homeDefocused,
 };
