@@ -10,7 +10,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <NavBar />
-        <div className="container pt-4" >
+        <div className="container pt-4 mx-auto" >
           <Alert />
           <Switch>
             <Route path="/" exact component={Home} />

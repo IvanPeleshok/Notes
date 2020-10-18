@@ -1,0 +1,26 @@
+.form__login {
+    margin: 25px;
+    width: 300px;
+    /* display: none; */
+    position: absolute;
+    z-index: 10;
+    padding: 20px 40px 20px 20px;
+    background: white;
+    border: solid #0275d8 2px;
+    border-radius: 20px;
+    transform: translateY(-150%);
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border: solid #0275d8 3px;
+    border-radius: 100px;
+    outline: none;
+}
+
+.log__active{
+    transform: translateY(50%);
+    transition: 1s all;
+}

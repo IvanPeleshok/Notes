@@ -12,7 +12,6 @@ class Home extends PureComponent {
     
     if (this.props.loading) {
       this.props.getNote();
-      console.log("Лизунчик-пердунчик");
     }
   }
 
@@ -37,8 +36,8 @@ class Home extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-  notes: state.notes,
-  loading: state.loading,
+  notes: state.note.notes,
+  loading: state.note.loading,
 });
 
 const mapDispatchToProps = {

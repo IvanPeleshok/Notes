@@ -28,8 +28,8 @@ const Alert = ({ text, alertHide, visible }) => {
 
 const mapStateToProps = (state) => {
   return {
-    text: state.alertText,
-    visible: state.visible,
+    text: state.alrt.alertText,
+    visible: state.alrt.visible,
   };
 };
 

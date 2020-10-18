@@ -35,7 +35,7 @@ const Form = ({ text, alertShow, alertRecord, alertHide, alertSubmit, postNote }
 
 const mapStateToProps = (state) => {
   return {
-    text: state.text,
+    text: state.alrt.text,
   };
 };
 

@@ -21,10 +21,11 @@ code {
 
 .header__item{
   color: white;
-  transition: 0.5s all;
+  transition: 0.3s all;
+  font-weight: 300;
 }
 
 .header__item:hover{
    opacity: 0.8;
-   font-size: 1.2rem;
+   font-size: 0.9rem;
 }

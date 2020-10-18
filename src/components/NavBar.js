@@ -36,36 +36,48 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import { Login } from "./Login";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isLogin, setLogin] = useState(false);
+  const loginToggle = () => setLogin(!isLogin);
   const toggle = () => setIsOpen(!isOpen);
-
+  console.log(isLogin);
   return (
     <div>
       <Navbar color="primary" light expand="md">
         <div className="container">
-          <NavbarBrand href="/">
-            Note
-          </NavbarBrand>
+          <NavbarBrand href="/">Note</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto d-flex align-items-center" navbar>
+            <Nav className="ml-auto d-flex align-items-center" navbar>
               <NavItem>
                 <NavLink href="/">
-                <span className="header__item">Home</span>
+                  <span className="header__item">Home</span>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">
-                 <span className="header__item">About</span>
+                  <span className="header__item">About</span>
                 </NavLink>
+              </NavItem>
+              <NavItem>
+                <span
+                  style={{ cursor: "pointer" }}
+                  onClick={() => loginToggle()}
+                  className={'header__item'}
+                >
+                  Login
+                </span>
               </NavItem>
             </Nav>
           </Collapse>
         </div>
       </Navbar>
+      <div style={{display:'flex', justifyContent:'center' }}>
+        <Login isLogin={isLogin} />
+      </div>
     </div>
   );
 };
